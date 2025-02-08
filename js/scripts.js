@@ -1,5 +1,19 @@
 http = "https://0p1x36b4-3000.uks1.devtunnels.ms/"
 // http = "http://localhost:3000/"
+
+
+function downloadCV() {
+    const url = 'archivos/CV_Gonzalo.pdf';  
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'archivos/CV_Gonzalo.pdf';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+}
+
+
+
 document.addEventListener("DOMContentLoaded", function() {
     const form = document.getElementById("contactForm");
     if (!form) {
