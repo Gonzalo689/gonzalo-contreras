@@ -1,5 +1,6 @@
-http = "https://0p1x36b4-3000.uks1.devtunnels.ms/"
+// http = "https://0p1x36b4-3000.uks1.devtunnels.ms/"
 // http = "http://localhost:3000/"
+http = "https://portafolio-dvhu.vercel.app/"
 
 document.addEventListener("DOMContentLoaded", function() {
     const form = document.getElementById("contactForm");
