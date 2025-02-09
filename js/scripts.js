@@ -1,8 +1,6 @@
 http = "https://0p1x36b4-3000.uks1.devtunnels.ms/"
 // http = "http://localhost:3000/"
 
-
-
 document.addEventListener("DOMContentLoaded", function() {
     const form = document.getElementById("contactForm");
     if (!form) {
