@@ -3,10 +3,7 @@ http = "https://0p1x36b4-3000.uks1.devtunnels.ms/"
 
 document.addEventListener("DOMContentLoaded", function() {
     const form = document.getElementById("contactForm");
-    if (!form) {
-        console.error("Error: No se encontró el formulario con ID 'contactForm'");
-        return;
-    }
+    const submitButton = document.getElementById("contactFormButton");
 
     form.addEventListener("submit", async function(e) {
         e.preventDefault();
@@ -14,6 +11,8 @@ document.addEventListener("DOMContentLoaded", function() {
         const formData = new FormData(this);
         const data = Object.fromEntries(formData.entries());
 
+
+        submitButton.disabled = true;
         try {
             const response = await fetch(http + "send", {
                 method: "POST",
@@ -26,6 +25,8 @@ document.addEventListener("DOMContentLoaded", function() {
         } catch (error) {
             console.error("Error al enviar el mensaje:", error);
             alert("No se pudo enviar el mensaje. Inténtelo de nuevo más tarde.");
+        } finally {
+            submitButton.disabled = false;
         }
     });
 });

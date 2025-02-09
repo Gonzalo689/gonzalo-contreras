@@ -15,6 +15,7 @@
   <!-- <link rel="stylesheet" type="text/css" href="css/bootstrap.css">  -->
   <link rel="stylesheet" type="text/css" href="css/virtual.css">
   <link rel="stylesheet" type="text/css" href="css/topbar.virtual.css">  
+  <link rel="stylesheet" type="text/css" href="css/style.css">  
   <!-- Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-K3J2HTR40W"></script>
   <script>
@@ -25,6 +26,22 @@
     gtag('config', 'G-K3J2HTR40W');
   </script>
 
+
+
+  <!-- update the version number as needed -->
+  <script defer src="/__/firebase/11.3.0/firebase-app-compat.js"></script>
+  <!-- include only the Firebase features as you need -->
+  <script defer src="/__/firebase/11.3.0/firebase-auth-compat.js"></script>
+  <script defer src="/__/firebase/11.3.0/firebase-database-compat.js"></script>
+  <script defer src="/__/firebase/11.3.0/firebase-firestore-compat.js"></script>
+  <script defer src="/__/firebase/11.3.0/firebase-functions-compat.js"></script>
+  <script defer src="/__/firebase/11.3.0/firebase-messaging-compat.js"></script>
+  <script defer src="/__/firebase/11.3.0/firebase-storage-compat.js"></script>
+  <script defer src="/__/firebase/11.3.0/firebase-analytics-compat.js"></script>
+  <script defer src="/__/firebase/11.3.0/firebase-remote-config-compat.js"></script>
+  <script defer src="/__/firebase/11.3.0/firebase-performance-compat.js"></script>
+
+  <script defer src="/__/firebase/init.js?useEmulator=true"></script>
 
 </head>
 <body class="theme-red">  
@@ -282,7 +299,7 @@
               <div class="col-12 mt-3 wow fadeInUp">
                 <textarea class="form-control" name="Message" rows="6" placeholder="Escriba su mensaje aqui.." ></textarea>
               </div>
-              <button type="submit" class="btn btn-theme mt-3 wow fadeInUp ml-1">Enviar mensaje</button>
+              <button type="submit" class="btn btn-theme mt-3 wow fadeInUp ml-1" id="contactFormButton">Enviar mensaje</button>
             </div>
           </form>
         </div>
