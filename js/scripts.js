@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 document.getElementById('laraMobile').addEventListener('click', function() {
-    window.open('https://github.com/Gonzalo689/LaraMobile/tree/master', '_blank');
+    window.open('https://github.com/Gonzalo689/LaraMobile/', '_blank');
 });
 document.getElementById('eventosEmerita').addEventListener('click', function() {
     window.open('https://github.com/Gonzalo689/Proyecto_-Eventos-Emerita', '_blank');
