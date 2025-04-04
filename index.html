@@ -14,38 +14,13 @@
   
   <!-- Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-K3J2HTR40W"></script>
-  <script src="js/config.js"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-K3J2HTR40W');
   </script>
-  <script type="text/javascript">
-    (async function(d, t) {
-      // Obtener la configuración de Voiceflow desde la API
-      const vfConfig = await getVoiceflowConfig();
-  
-      // Si la configuración es válida, cargar el script de Voiceflow
-      if (vfConfig) {
-        var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
-        v.onload = function() {
-          // Cargar el widget de Voiceflow con la configuración obtenida
-          window.voiceflow.chat.load({
-            verify: { projectID: vfConfig.projectID },
-            url: vfConfig.url,
-            versionID: vfConfig.versionID,
-            voice: { url: vfConfig.voiceURL }
-          });
-        };
-        v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs";
-        v.type = "text/javascript";
-        s.parentNode.insertBefore(v, s);
-      } else {
-        console.error("No se pudo cargar la configuración de Voiceflow.");
-      }
-    })(document, "script");
-  </script>
+  <script src="js/vf_conf.js" type="module"></script>
 </head>
 <body>
   <header id="home">
