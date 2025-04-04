@@ -14,11 +14,30 @@
   
   <!-- Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-K3J2HTR40W"></script>
+  <script src="js/config.js"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-K3J2HTR40W');
+  </script>
+  <script type="text/javascript">
+    (function(d, t) {
+      var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+      v.onload = function() {
+        window.voiceflow.chat.load({
+          verify: { projectID: VF_CONFIG.projectID },
+          url: VF_CONFIG.url,
+          versionID: VF_CONFIG.versionID,
+          voice: {
+            url: VF_CONFIG.voiceURL
+          }
+        });
+      };
+      v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs";
+      v.type = "text/javascript";
+      s.parentNode.insertBefore(v, s);
+    })(document, "script");
   </script>
 </head>
 <body>
