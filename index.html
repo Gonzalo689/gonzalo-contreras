@@ -22,21 +22,28 @@
     gtag('config', 'G-K3J2HTR40W');
   </script>
   <script type="text/javascript">
-    (function(d, t) {
-      var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
-      v.onload = function() {
-        window.voiceflow.chat.load({
-          verify: { projectID: VF_CONFIG.projectID },
-          url: VF_CONFIG.url,
-          versionID: VF_CONFIG.versionID,
-          voice: {
-            url: VF_CONFIG.voiceURL
-          }
-        });
-      };
-      v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs";
-      v.type = "text/javascript";
-      s.parentNode.insertBefore(v, s);
+    (async function(d, t) {
+      // Obtener la configuración de Voiceflow desde la API
+      const vfConfig = await getVoiceflowConfig();
+  
+      // Si la configuración es válida, cargar el script de Voiceflow
+      if (vfConfig) {
+        var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+        v.onload = function() {
+          // Cargar el widget de Voiceflow con la configuración obtenida
+          window.voiceflow.chat.load({
+            verify: { projectID: vfConfig.projectID },
+            url: vfConfig.url,
+            versionID: vfConfig.versionID,
+            voice: { url: vfConfig.voiceURL }
+          });
+        };
+        v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs";
+        v.type = "text/javascript";
+        s.parentNode.insertBefore(v, s);
+      } else {
+        console.error("No se pudo cargar la configuración de Voiceflow.");
+      }
     })(document, "script");
   </script>
 </head>

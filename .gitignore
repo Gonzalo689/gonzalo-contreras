@@ -17,7 +17,6 @@ y
 .github
 
 # config personalization
-js/config.js
 conf.txt
 
 # Uncomment this if you'd like others to create their own Firebase project.
